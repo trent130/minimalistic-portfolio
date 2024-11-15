@@ -27,7 +27,7 @@
 //           viewport={{ once: true }}
 //           className="text-center mb-16"
 //         >
-//           <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">
+//           <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-black">
 //             About Me
 //           </h2>
 //           <div className="max-w-2xl mx-auto space-y-4">
@@ -49,7 +49,7 @@
 //           transition={{ delay: 0.2 }}
 //           className="space-y-8"
 //         >
-//           <h3 className="text-2xl font-semibold text-center text-gray-900 dark:text-white">
+//           <h3 className="text-2xl font-semibold text-center text-gray-900 dark:text-black">
 //             Technical Skills
 //           </h3>
           
@@ -79,7 +79,7 @@
 //               viewport={{ once: true }}
 //               className="p-6 rounded-xl bg-gray-50 dark:bg-gray-800"
 //             >
-//               <h4 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
+//               <h4 className="text-xl font-semibold mb-4 text-gray-900 dark:text-black">
 //                 What I Do
 //               </h4>
 //               <ul className="space-y-3 text-gray-600 dark:text-gray-300">
@@ -96,7 +96,7 @@
 //               viewport={{ once: true }}
 //               className="p-6 rounded-xl bg-gray-50 dark:bg-gray-800"
 //             >
-//               <h4 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
+//               <h4 className="text-xl font-semibold mb-4 text-gray-900 dark:text-black">
 //                 My Approach
 //               </h4>
 //               <ul className="space-y-3 text-gray-600 dark:text-gray-300">
@@ -139,7 +139,7 @@ export default function AboutMe() {
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-4xl font-bold mb-12 text-white"
+          className="text-4xl font-bold mb-12 text-black dark:text-white"
         >
           / about me
         </motion.h2>
@@ -155,7 +155,7 @@ export default function AboutMe() {
               I am currently a{' '}
               <motion.span
                 whileHover={{ color: '#64ffda' }}
-                className="text-white font-medium transition-colors"
+                className="text-black dark:text-white font-medium transition-colors"
               >
                 Software Development Engineer at Amazon
               </motion.span>
@@ -163,14 +163,14 @@ export default function AboutMe() {
               undertaking a part-time{' '}
               <motion.span
                 whileHover={{ color: '#64ffda' }}
-                className="text-white font-medium transition-colors"
+                className="text-black  dark:text-white  font-medium transition-colors"
               >
                 Master&apos;s of Science in Software Engineering
               </motion.span>{' '}
               at{' '}
               <motion.span
                 whileHover={{ color: '#64ffda' }}
-                className="text-white font-medium transition-colors"
+                className="text-black dark:text-white font-medium transition-colors"
               >
                 University of Oxford
               </motion.span>
@@ -178,7 +178,7 @@ export default function AboutMe() {
             </p>
 
             <div className="space-y-4">
-              <p className="text-lg font-medium text-white">
+              <p className="text-lg font-medium text-black dark:text-white">
                 Here are some technologies I have been working with:
               </p>
               <motion.ul 
@@ -201,7 +201,7 @@ export default function AboutMe() {
                     </span>
                     <span className="flex items-center gap-2">
                       <span>{tech.icon}</span>
-                      <span className="group-hover:text-white transition-colors">
+                      <span className="group-hover:text-black transition-colors">
                         {tech.name}
                       </span>
                     </span>
@@ -228,16 +228,16 @@ export default function AboutMe() {
             className="lg:w-1/3 relative group"
           >
             <div className="relative w-full aspect-square rounded-lg overflow-hidden">
-              {/* <Image
-                src="/placeholder.svg"
+              <img
+                src=""
                 alt="Profile picture"
                 width={400}
                 height={400}
-                quality={95}
-                priority
+                // quality={95}
+                // priority
                 className="rounded-lg object-cover transition-all duration-300 
                   group-hover:scale-105 group-hover:rotate-2"
-              /> */}
+              />
               <div className="absolute inset-0 bg-[#64ffda]/10 
                 mix-blend-multiply group-hover:bg-transparent 
                 transition-colors duration-300" 
