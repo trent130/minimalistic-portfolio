@@ -63,12 +63,7 @@ export default function Hero() {
           transition={{ duration: 0.5 }}
           className="mb-8"
         >
-          <img
-            src="/your-profile-image.jpg"
-            alt="Lawrence Wafula"
-            className="w-48 h-48 rounded-full mx-auto mb-6 object-cover shadow-lg"
-            loading="lazy"
-          />
+          
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
             Lawrence Wafula
           </h1>
