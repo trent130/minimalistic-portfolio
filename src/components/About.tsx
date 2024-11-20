@@ -134,7 +134,7 @@ export default function AboutMe() {
   ]
 
   return (
-    <section className="min-h-screen bg-gray-50 dark:bg-gray-900 py-20 px-6">
+    <section id="about" className="min-h-screen bg-gray-50 dark:bg-gray-900 py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
@@ -229,7 +229,8 @@ export default function AboutMe() {
           >
             <div className="relative w-full aspect-square rounded-lg overflow-hidden">
               <img
-                src=""
+                src="
+                "
                 alt="Profile picture"
                 width={400}
                 height={400}

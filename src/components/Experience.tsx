@@ -27,7 +27,7 @@ const experiences: Experience[] = [
 
 export default function Experience() {
   return (
-    <section className="py-20 px-6 bg-gray-50 dark:bg-gray-900 transition-colors">
+    <section id="experience" className="py-20 px-6 bg-gray-50 dark:bg-gray-900 transition-colors">
       <div className="max-w-4xl mx-auto">
         <motion.h2
           initial={{ opacity: 0 }}
