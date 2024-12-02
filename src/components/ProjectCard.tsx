@@ -32,7 +32,7 @@ export default function ProjectCard({
         <img 
           src={image} 
           alt={`Screenshot of ${title}`}
-          className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+          className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-115"
           loading="lazy"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">

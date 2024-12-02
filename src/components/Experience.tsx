@@ -10,17 +10,17 @@ interface Experience {
 
 const experiences: Experience[] = [
   {
-    position: "Senior Full Stack Developer",
+    position: "Full Stack Developer",
     company: "Lish AI Labs",
     period: "2024 - Present",
     description: "Development of enterprise applications using React, Node.js, and Docker. Implemented CI/CD pipelines and mentored by senior developers.",
     technologies: ["React", "Node.js", "python", "TypeScript", "Docker"]
   },
   {
-    position: "Senior Full Stack Developer",
+    position: "Developer",
     company: "Zendawa",
     period: "2024 - Present",
-    description: "Development of virtual assistant chatbot and foundation website using Astro, react and django backend.",
+    description: "Development of virtual assistant chatbot and foundation website using react and django backend.",
     technologies: ["React", "Node.js", "python", "TypeScript", "Docker"]
   },
 ];
