@@ -12,7 +12,7 @@ export const sendEmail = async (payload: EmailPayload) => {
   try {
     const response = await emailjs.send(
       'service_lhw345q', // Replace with your EmailJS Service ID
-      'template_d6qx9pm', // Replace with your EmailJS Template ID
+      'template_fohl49k', // Replace with your EmailJS Template ID
       { name, email, message }, // Template parameters
       'iKaSM5RskGMs8dWLk' // Replace with your EmailJS Public Key
     );

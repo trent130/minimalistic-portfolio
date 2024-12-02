@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { useState, FormEvent, useRef, useEffect } from 'react';
 import { FiMail, FiUser, FiMessageSquare, FiCheck, FiAlertCircle } from 'react-icons/fi';
+import { sendEmail, EmailPayload } from './email';
 
 interface FormData {
   name: string;
@@ -15,7 +16,7 @@ interface FormErrors {
 }
 
 export default function Contact() {
-  const [formData, setFormData] = useState<FormData>({
+  const [formData, setFormData] = useState<EmailPayload>({
     name: '',
     email: '',
     message: ''
@@ -36,7 +37,7 @@ export default function Contact() {
     }
   }, [status]);
 
-  const validateField = (name: keyof FormData, value: string): string => {
+  const validateField = (name: keyof EmailPayload, value: string): string => {
     switch (name) {
       case 'name':
         if (!value.trim()) return 'Name is required';
@@ -80,23 +81,21 @@ export default function Contact() {
     setStatus('loading');
     
     try {
-      // Simulated API call - replace with your actual API endpoint
+      /* // Simulated API call - replace with your actual API endpoint
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       // Replace with your actual API endpoint
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
-      });
-
-      if (!response.ok) throw new Error();
-      
-      setStatus('success');
-      setTimeout(() => setStatus('idle'), 3000);
-    } catch (error) {
+        body: JSON.stringify(formData) */
+        const result = await sendEmail(formData)
+        if(!result.success) throw new Error();
+        setStatus('success')
+    } catch (error){
       setStatus('error');
-      setTimeout(() => setStatus('idle'), 3000);
+    } finally {
+      setTimeout(() => setStatus('idle'), 3000)
     }
   };
 
@@ -106,7 +105,7 @@ export default function Contact() {
     
     // Validate on change if field has been touched
     if (touched[name]) {
-      const error = validateField(name as keyof FormData, value);
+      const error = validateField(name as keyof EmailPayload, value);
       setErrors(prev => ({ ...prev, [name]: error }));
     }
   };
@@ -114,7 +113,7 @@ export default function Contact() {
   const handleBlur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setTouched(prev => ({ ...prev, [name]: true }));
-    const error = validateField(name as keyof FormData, value);
+    const error = validateField(name as keyof EmailPayload, value);
     setErrors(prev => ({ ...prev, [name]: error }));
   };
 
