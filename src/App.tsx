@@ -34,9 +34,9 @@ function App() {
       { property: 'og:description', content: 'Full Stack Developer specializing in building scalable web applications with modern technologies.' },
       { property: 'og:type', content: 'website' },
       // Add your website URL
-      { property: 'og:url', content: 'https://your-portfolio-url.com' },
+      { property: 'og:url', content: 'https://minimalistic-portfolio-chi.vercel.app' },
       // Add your preview image
-      { property: 'og:image', content: 'https://your-portfolio-url.com/preview-image.jpg' }
+      { property: 'og:image', content: 'https://minimalistic-portfolio-chi.vercel.app/preview-image.png' }
     ];
 
     ogTags.forEach(tag => {
