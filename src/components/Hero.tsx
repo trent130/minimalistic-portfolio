@@ -20,7 +20,7 @@ export default function Hero() {
     {
       icon: FaLinkedin,
       href: 'https://linkedin.com/in/lawrencewafula',
-      label: 'LinkedIn Profile'
+      label: 'LinkedIn Profile'   
     },
     {
       icon: FaTwitter,

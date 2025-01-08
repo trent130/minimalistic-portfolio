@@ -197,7 +197,7 @@ export default function About() {
           >
             <div className="relative w-full aspect-square rounded-lg overflow-hidden">
               <img
-                src="/your-profile-image.jpg"
+                src="/test.jpg"
                 alt="Profile"
                 className="rounded-lg object-cover transition-all duration-300 
                   group-hover:scale-105 group-hover:rotate-2"

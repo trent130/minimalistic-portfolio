@@ -34,9 +34,9 @@ function App() {
       { property: 'og:description', content: 'Full Stack Developer specializing in building scalable web applications with modern technologies.' },
       { property: 'og:type', content: 'website' },
       // Add your website URL
-      { property: 'og:url', content: 'https://minimalistic-portfolio-chi.vercel.app' },
+      { property: 'og:url', content: 'https://lawrence-wafula.vercel.app' },
       // Add your preview image
-      { property: 'og:image', content: 'https://minimalistic-portfolio-chi.vercel.app/preview-image.png' }
+      { property: 'og:image', content: 'https://lawrence-wafula.vercel.app/preview-image.png' }
     ];
 
     ogTags.forEach(tag => {
