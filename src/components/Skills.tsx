@@ -17,27 +17,27 @@ const skillCategories: SkillCategories = {
   'Frontend': {
     icon: '🎨',
     skills: [
-      { name: 'React.js', level: 90, color: 'bg-blue-500 dark:bg-blue-600' },
-      { name: 'TypeScript', level: 85, color: 'bg-blue-400 dark:bg-blue-500' },
-      { name: 'Next.js', level: 80, color: 'bg-black dark:bg-gray-700' },
-      { name: 'Tailwind CSS', level: 95, color: 'bg-cyan-500 dark:bg-cyan-600' }
+      { name: 'React.js', level: 60, color: 'bg-blue-500 dark:bg-blue-600' },
+      { name: 'TypeScript', level: 40, color: 'bg-blue-400 dark:bg-blue-500' },
+      { name: 'Next.js', level: 60, color: 'bg-black dark:bg-gray-700' },
+      { name: 'Tailwind CSS', level: 75, color: 'bg-cyan-500 dark:bg-cyan-600' }
     ]
   },
   'Backend': {
     icon: '⚙️',
     skills: [
-      { name: 'Node.js', level: 85, color: 'bg-green-500 dark:bg-green-600' },
+      { name: 'Node.js', level: 50, color: 'bg-green-500 dark:bg-green-600' },
       { name: 'Python', level: 80, color: 'bg-yellow-500 dark:bg-yellow-600' },
-      { name: 'GraphQL', level: 75, color: 'bg-pink-500 dark:bg-pink-600' },
-      { name: 'PostgreSQL', level: 85, color: 'bg-blue-600 dark:bg-blue-700' }
+      { name: 'GraphQL', level: 25, color: 'bg-pink-500 dark:bg-pink-600' },
+      { name: 'PostgreSQL', level: 65, color: 'bg-blue-600 dark:bg-blue-700' }
     ]
   },
   'DevOps': {
     icon: '🚀',
     skills: [
-      { name: 'Docker', level: 80, color: 'bg-sky-500 dark:bg-sky-600' },
-      { name: 'AWS', level: 75, color: 'bg-orange-500 dark:bg-orange-600' },
-      { name: 'CI/CD', level: 85, color: 'bg-green-600 dark:bg-green-700' },
+      { name: 'Docker', level: 10, color: 'bg-sky-500 dark:bg-sky-600' },
+      { name: 'AWS', level: 0, color: 'bg-orange-500 dark:bg-orange-600' },
+      { name: 'CI/CD', level: 60, color: 'bg-green-600 dark:bg-green-700' },
       { name: 'Git', level: 90, color: 'bg-red-500 dark:bg-red-600' }
     ]
   }

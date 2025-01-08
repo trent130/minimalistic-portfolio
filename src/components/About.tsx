@@ -12,7 +12,7 @@ export default function About() {
   const [isLoading, setIsLoading] = useState(true);
 
   const technologies: Technology[] = [
-    { name: 'JavaScript/TypeScript', icon: '🔷', color: '#3178C6' },
+    { name: 'TypeScript', icon: '🔷', color: '#3178C6' },
     { name: 'React.js', icon: '⚛️', color: '#61DAFB' },
     { name: 'nest.js', icon: '🎯', color: '#E0234E' },
     { name: 'Python', icon: '🐍', color: '#3776AB' },
@@ -62,7 +62,7 @@ export default function About() {
           animate={{ opacity: 1, y: 0 }}
           className="text-4xl font-bold mb-12 text-gray-900 dark:text-white"
         >
-        about me
+        About me
         </motion.h2>
 
         <div className="flex flex-col lg:flex-row gap-12 items-start">
@@ -147,10 +147,10 @@ export default function About() {
                     <span className="text-[#64ffda]">▹</span>
                     <span>API Design and Development</span>
                   </li>
-                  <li className="flex items-center space-x-2">
+                  {/* <li className="flex items-center space-x-2">
                     <span className="text-[#64ffda]">▹</span>
                     <span>Cloud Infrastructure</span>
-                  </li>
+                  </li> */}
                   <li className="flex items-center space-x-2">
                     <span className="text-[#64ffda]">▹</span>
                     <span>Performance Optimization</span>

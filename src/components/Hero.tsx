@@ -19,7 +19,7 @@ export default function Hero() {
     },
     {
       icon: FaLinkedin,
-      href: 'https://linkedin.com/in/lawrencewafula',
+      href: 'https://www.linkedin.com/in/lawrence-wafula-085034244',
       label: 'LinkedIn Profile'   
     },
     {
@@ -36,6 +36,13 @@ export default function Hero() {
     }, 1000);
     return () => clearTimeout(timer);
   }, []);
+
+  const buttonVariants = {
+    hover: { scale: 1.1, y: -10 },
+    rest: { scale: 1, y: 0 },
+  };
+  
+  
 
   if (isLoading) {
     return (
@@ -105,19 +112,20 @@ export default function Hero() {
           transition={{ delay: 0.4 }}
           className="mt-12"
         >
-          <a
-            href="#projects"
-            className="inline-flex items-center text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
-            aria-label="View my projects"
-          >
-            {/* Scroll Indicator */}
+          
+            
+           {/* Scroll Indicator */}
           <motion.div
-            initial={{ opacity: 0 }}
+            initial= "rest"
+            variants={buttonVariants}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1 }}
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+            transition={{ delay: 1, type: 'spring', stiffness: 300, damping: 10 }}
+            className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
+            whileHover="hover"
           >
 
+            
+            <p className="text-center mb-2">scroll down</p>
             <motion.svg
               animate={{ y: [0, 5, 0] }}
               transition={{ repeat: Infinity, duration: 1.5 }}
@@ -132,8 +140,8 @@ export default function Hero() {
               <path d="M19 14l-7 7m0 0l-7-7m7 7V3" />
             </motion.svg>
           </motion.div>
-  
-          </a>
+
+          
         </motion.div>
       </div>
     </section>
