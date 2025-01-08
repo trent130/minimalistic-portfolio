@@ -1,4 +1,9 @@
 /** @type {import('tailwindcss').Config} */
+import typography from '@tailwindcss/typography';
+import forms from '@tailwindcss/forms';
+import aspectRatio from '@tailwindcss/aspect-ratio';
+import containerQueries from '@tailwindcss/container-queries';
+import animate from 'tailwindcss-animate';
 export default {
   darkMode: ['class',],
   content: [
@@ -138,10 +143,10 @@ export default {
   	}
   },
   plugins: [
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/aspect-ratio'),
-    require('@tailwindcss/container-queries'),
-    require("tailwindcss-animate")
+    typography,
+    forms,
+    aspectRatio,
+    containerQueries,
+    animate,
 ],
 }
