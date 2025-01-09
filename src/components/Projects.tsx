@@ -24,6 +24,7 @@ export default function Projects() {
       image: 'https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80',
       technologies: ['Django', 'PostgreSQL', 'Daraja API', 'Tailwind CSS'],
       githubUrl: 'https://github.com/trent130/EasyMarket',
+      liveUrl: '#', //https://easymarket.herokuapp.com/
     },
     {
       id: 2,
@@ -32,12 +33,13 @@ export default function Projects() {
       image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80',
       technologies: ['TypeScript', 'Django', 'PostgreSQL', 'Tailwind CSS', 'Nest.js'],
       githubUrl: 'https://github.com/trent130/hello',
+      liveUrl: '#', //https://realhello.vercel.app/
     },
     {
       id: 3,
       title: 'personal portfolio',
       description: 'Built a responsive personal portfolio with react js and email js for contact.',
-      image: 'https://images.unsplash.com/photo-1547954575-855750c57bd3?w=800&q=80',
+      image: '/preview-image.png',
       technologies: ['PostgreSQL', 'Nest.js', 'Angular', 'Tailwind CSS'],
       githubUrl: 'https://github.com/trent130/minimalistic-portfolio',
       liveUrl: 'https://lawrence-wafula.vercel.app/',

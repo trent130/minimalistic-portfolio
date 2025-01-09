@@ -1,3 +1,4 @@
-# Minimalistic portfolio
+# Minimalistic Portfolio
 
-this is a portfolio site build with next js and is pretty much minimalistic still in the factory though
+This is a portfolio site built with Next.js. It emphasizes a minimalistic design and is currently under development.
+
