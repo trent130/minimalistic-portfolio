@@ -10,6 +10,7 @@ interface SocialLink {
 
 export default function Hero() {
   const [isLoading, setIsLoading] = useState(true);
+  const [isVisible, setIsVisible] = useState(true); // State for scroll indicator visibility
 
   const socialLinks: SocialLink[] = [
     {
@@ -37,12 +38,23 @@ export default function Hero() {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const buttonVariants = {
     hover: { scale: 1.1, y: -10 },
     rest: { scale: 1, y: 0 },
   };
-  
-  
 
   if (isLoading) {
     return (
@@ -70,7 +82,6 @@ export default function Hero() {
           transition={{ duration: 0.5 }}
           className="mb-8"
         >
-          
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
             Lawrence Wafula
           </h1>
@@ -112,36 +123,32 @@ export default function Hero() {
           transition={{ delay: 0.4 }}
           className="mt-12"
         >
-          
-            
-           {/* Scroll Indicator */}
-          <motion.div
-            initial= "rest"
-            variants={buttonVariants}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1, type: 'spring', stiffness: 300, damping: 10 }}
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
-            whileHover="hover"
-          >
-
-            
-            <p className="text-center mb-2">scroll down</p>
-            <motion.svg
-              animate={{ y: [0, 5, 0] }}
-              transition={{ repeat: Infinity, duration: 1.5 }}
-              className="w-5 h-5"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+          {isVisible && (
+            // Scroll Indicator
+            <motion.div
+              initial="rest"
+              variants={buttonVariants}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1, type: 'spring', stiffness: 300, damping: 10, repeat: Infinity, duration: 1.5 }}
+              className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
+              whileHover="hover"
             >
-              <path d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-            </motion.svg>
-          </motion.div>
-
-          
+              <p className="text-center mb-2">scroll down</p>
+              <motion.svg
+                animate={{ y: [0, 5, 0] }}
+                transition={{ repeat: Infinity, duration: 1.5 }}
+                className="w-5 h-5"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </motion.svg>
+            </motion.div>
+          )}
         </motion.div>
       </div>
     </section>
