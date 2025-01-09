@@ -35,12 +35,13 @@ export default function Projects() {
     },
     {
       id: 3,
-      title: 'Kahoot-like Game',
-      description: 'Interactive quiz platform enabling real-time multiplayer gaming with custom quiz creation and instant scoring.',
+      title: 'personal portfolio',
+      description: 'Built a responsive personal portfolio with react js and email js for contact.',
       image: 'https://images.unsplash.com/photo-1547954575-855750c57bd3?w=800&q=80',
       technologies: ['PostgreSQL', 'Nest.js', 'Angular', 'Tailwind CSS'],
-      githubUrl: 'https://github.com/Tech-Titan-Labs/kapoow',
-    }
+      githubUrl: 'https://github.com/trent130/minimalistic-portfolio',
+      liveUrl: 'https://lawrence-wafula.vercel.app/',
+    },
   ]);
 
   // Simulate loading state
