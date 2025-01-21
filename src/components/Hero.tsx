@@ -53,18 +53,18 @@ export default function Hero() {
     animate: { opacity: 1 },
   };
 
-  const scrollVariants = {
-    initial: { opacity: 0, y: -20 },
-    animate: {
-      opacity: 1,
-      y: 20,
-      transition: {
-        duration: 1,
-        repeat: Infinity,
-        ease: "linear",
-      },
-    },
-  };
+  // const scrollVariants = {
+  //   initial: { opacity: 0, y: -20 },
+  //   animate: {
+  //     opacity: 1,
+  //     y: 20,
+  //     transition: {
+  //       duration: 1,
+  //       repeat: Infinity,
+  //       ease: "linear",
+  //     },
+  //   },
+  // };
 
   if (isLoading) {
     return (
