@@ -75,7 +75,7 @@
   margin: 10px auto;
   width: 40px;
   height: 80px;
-  border: 3px solid rgba(122, 122, 124, 0.918);
+  border: 3px solid #10b981;
   border-radius: 20px;
   display: flex;
 }
@@ -84,7 +84,7 @@
   display: block;
   width: 20px;
   height: 20px;
-  background: linear-gradient(170deg, rgba(122, 122, 124, 0.918), rgb(123, 124, 124));
+  background: linear-gradient(170deg, #10b981, #059669);
   border-radius: 50%;
   margin: auto;
   animation: scrolling13 1s linear infinite;
@@ -101,6 +101,38 @@
   }
 }
 
+/* Backend-focused terminal styling */
+.terminal-window {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+}
+
+.terminal-header {
+  background: #2d2d2d;
+  padding: 8px 12px;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.terminal-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.terminal-dot.red { background: #ff5f56; }
+.terminal-dot.yellow { background: #ffbd2e; }
+.terminal-dot.green { background: #27ca3f; }
+
+/* Code syntax highlighting colors */
+.syntax-keyword { color: #569cd6; }
+.syntax-string { color: #ce9178; }
+.syntax-comment { color: #6a9955; }
+.syntax-function { color: #dcdcaa; }
+.syntax-variable { color: #9cdcfe; }
 
 @layer components {
   .container-padding {

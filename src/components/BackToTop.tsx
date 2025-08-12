@@ -31,22 +31,26 @@ const BackToTop = () => {
         onClick={scrollToTop}
         whileHover={{ y: -5 }}
         whileTap={{ scale: 0.95 }}
-        className="fixed bottom-8 right-8 block text-[#64ffda] hover:text-white
-      transition-colors duration-300"
+        className="fixed bottom-8 right-8 p-3 bg-gray-900 border-2 border-green-500 
+          text-green-500 hover:bg-green-500 hover:text-gray-900 rounded-lg
+          transition-colors duration-300 font-mono"
 >
-      <svg
-        className="w-6 h-6 transform rotate-180"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M19 14l-7 7m0 0l-7-7m7 7V3"
-        />
-      </svg>
+      <div className="flex items-center gap-2">
+        <svg
+          className="w-4 h-4 transform rotate-180"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M19 14l-7 7m0 0l-7-7m7 7V3"
+          />
+        </svg>
+        <span className="text-xs">top</span>
+      </div>
       <span className="sr-only">Back to top</span>
     </motion.button>
   )

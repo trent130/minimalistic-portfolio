@@ -13,15 +13,15 @@ const experiences: Experience[] = [
     position: "Full Stack Developer",
     company: "Lish AI Labs",
     period: "2024 - Present",
-    description: "Development of enterprise applications using React, Node.js, and Docker. Implemented CI/CD pipelines and mentored by senior developers.",
-    technologies: ["React", "Node.js", "python", "TypeScript", "Docker"]
+    description: "Architected and developed scalable backend systems for AI-powered applications. Built RESTful APIs, optimized database queries, and implemented microservices architecture. Led backend development initiatives and code reviews.",
+    technologies: ["Python", "Django", "PostgreSQL", "Docker", "Redis", "API Design"]
   },
   {
     position: "Developer",
     company: "Zendawa",
     period: "2024 - Present",
-    description: "Development of virtual assistant chatbot and foundation website using react and django backend.",
-    technologies: ["React", "Node.js", "python", "TypeScript", "Docker"]
+    description: "Developed backend infrastructure for virtual assistant chatbot with natural language processing capabilities. Designed database schemas, implemented authentication systems, and optimized API performance.",
+    technologies: ["Django", "Python", "PostgreSQL", "REST APIs", "WebSocket", "NLP Integration"]
   },
 ];
 
@@ -33,10 +33,36 @@ export default function Experience() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-3xl font-bold text-center mb-12 dark:text-white"
+          className="text-3xl font-bold text-center mb-12 dark:text-white font-mono"
         >
-          Work Experience
+          <span className="text-green-500">&gt;</span> work_history.log
         </motion.h2>
+
+        {/* Terminal-style intro */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="bg-gray-900 dark:bg-gray-800 rounded-lg p-6 mb-12 font-mono text-sm border border-gray-700"
+        >
+          <div className="flex items-center gap-2 mb-4">
+            <div className="flex gap-1">
+              <div className="w-3 h-3 rounded-full bg-red-500"></div>
+              <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+              <div className="w-3 h-3 rounded-full bg-green-500"></div>
+            </div>
+            <span className="text-gray-400">~/experience</span>
+          </div>
+          <div className="text-green-400">
+            <span className="text-blue-400">$</span> grep -r "backend" career.log
+          </div>
+          <div className="text-white mt-2">
+            2+ years of backend-focused development experience
+          </div>
+          <div className="text-gray-400 mt-1">
+            Specializing in API development, database optimization, and system architecture
+          </div>
+        </motion.div>
 
         <div className="space-y-12">
           {experiences.map((exp, index) => (
@@ -49,26 +75,26 @@ export default function Experience() {
               className="relative pl-8 md:pl-12"
             >
               {/* Timeline line */}
-              <div className="absolute left-0 top-0 h-full w-px bg-gray-200 dark:bg-gray-700" />
+              <div className="absolute left-0 top-0 h-full w-px bg-green-500 dark:bg-green-600" />
               
               {/* Timeline dot */}
-              <div className="absolute w-4 h-4 -left-[8px] top-2 rounded-full border-4 border-white dark:border-gray-900 bg-black dark:bg-white" />
+              <div className="absolute w-4 h-4 -left-[8px] top-2 rounded-full border-4 border-white dark:border-gray-900 bg-green-500 dark:bg-green-400" />
               
               {/* Content */}
-              <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+              <div className="bg-gray-900 dark:bg-gray-800 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-700">
                 <div className="mb-4">
-                  <h3 className="text-xl font-semibold dark:text-white">
+                  <h3 className="text-xl font-semibold text-green-400 font-mono">
                     {exp.position}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-300 font-medium">
+                  <p className="text-blue-400 font-medium font-mono">
                     {exp.company}
                   </p>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                  <p className="text-sm text-gray-400 font-mono">
                     {exp.period}
                   </p>
                 </div>
                 
-                <p className="text-gray-700 dark:text-gray-300 mb-4">
+                <p className="text-gray-300 mb-4">
                   {exp.description}
                 </p>
                 
@@ -76,10 +102,10 @@ export default function Experience() {
                   {exp.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 text-sm rounded-full
-                        bg-gray-200 dark:bg-gray-700
-                        text-gray-700 dark:text-gray-300
-                        hover:bg-gray-300 dark:hover:bg-gray-600
+                      className="px-3 py-1 text-sm rounded-full font-mono
+                        bg-gray-800 border border-gray-600
+                        text-green-400
+                        hover:bg-gray-700 hover:border-green-500
                         transition-colors"
                     >
                       {tech}
@@ -99,16 +125,16 @@ export default function Experience() {
           className="text-center mt-12"
         >
           <a
-            href="../Profile.pdf" // Add your resume link
+            href="../Profile.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 
-              bg-black dark:bg-white
-              text-white dark:text-black
-              rounded-full hover:bg-gray-800 dark:hover:bg-gray-100
+            className="inline-flex items-center gap-2 px-6 py-3 font-mono
+              bg-gray-900 border-2 border-green-500
+              text-green-400
+              rounded-lg hover:bg-green-500 hover:text-gray-900
               transition-colors"
           >
-            <span>View Full Resume</span>
+            <span>cat resume.pdf</span>
             <svg 
               className="w-4 h-4" 
               fill="none" 

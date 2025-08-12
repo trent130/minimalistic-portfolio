@@ -100,9 +100,9 @@ export default function Header() {
             href="#home"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="text-xl font-bold text-gray-900 dark:text-white"
+            className="text-xl font-bold text-gray-900 dark:text-white font-mono"
           >
-            LW
+            <span className="text-green-500">&lt;</span>LW<span className="text-green-500">/&gt;</span>
           </motion.a>
 
           {/* Desktop Navigation */}
@@ -117,10 +117,10 @@ export default function Header() {
                 href={href}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className={`text-sm font-medium transition-colors ${
+                className={`text-sm font-medium transition-colors font-mono ${
                   activeSection === href.substring(1)
-                    ? 'text-blue-600 dark:text-blue-400'
-                    : 'text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400'
+                    ? 'text-green-500 dark:text-green-400'
+                    : 'text-gray-600 hover:text-green-500 dark:text-gray-300 dark:hover:text-green-400'
                 }`}
               >
                 {label}
@@ -134,7 +134,7 @@ export default function Header() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={toggleDarkMode}
-              className="p-2 rounded-full text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400"
+              className="p-2 rounded-full text-gray-600 hover:text-green-500 dark:text-gray-300 dark:hover:text-green-400 border border-gray-300 dark:border-gray-600"
               aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
             >
               {isDarkMode ? <FiSun className="w-5 h-5" /> : <FiMoon className="w-5 h-5" />}
@@ -144,7 +144,7 @@ export default function Header() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 rounded-full text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400"
+             className="md:hidden p-2 rounded-full text-gray-600 hover:text-green-500 dark:text-gray-300 dark:hover:text-green-400 border border-gray-300 dark:border-gray-600"
               aria-label="Toggle menu"
             >
               {isMenuOpen ? <FiX className="w-5 h-5" /> : <FiMenu className="w-5 h-5" />}
@@ -169,10 +169,10 @@ export default function Header() {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -10 }}
                   onClick={() => setIsMenuOpen(false)}
-                  className={`block py-2 text-sm font-medium ${
+                  className={`block py-2 text-sm font-medium font-mono ${
                     activeSection === href.substring(1)
-                      ? 'text-blue-600 dark:text-blue-400'
-                      : 'text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400'
+                      ? 'text-green-500 dark:text-green-400'
+                      : 'text-gray-600 hover:text-green-500 dark:text-gray-300 dark:hover:text-green-400'
                   }`}
                 >
                   {label}

@@ -66,10 +66,10 @@ export default function Footer() {
                 transition={{ delay: 0.1 * index }}
                 whileHover={{ 
                   y: -5,
-                  color: '#64ffda',
+                  color: '#10b981',
                   transition: { duration: 0.2 }
                 }}
-                className="text-gray-400 hover:text-[#64ffda] transition-colors
+                className="text-gray-400 hover:text-green-500 transition-colors
                   relative group"
               >
                 <span className="sr-only">{link.name}</span>
@@ -89,7 +89,7 @@ export default function Footer() {
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ delay: 0.4 }}
-            className="w-16 h-0.5 bg-[#64ffda] mx-auto"
+            className="w-16 h-0.5 bg-green-500 mx-auto"
           />
 
           {/* Copyright */}
@@ -99,8 +99,11 @@ export default function Footer() {
             transition={{ delay: 0.6 }}
             className="text-center space-y-4"
           >
-            <p className="text-gray-400">
+            <p className="text-gray-400 font-mono">
               © {new Date().getFullYear()} Lawrence Wafula. All rights reserved.
+            </p>
+            <p className="text-gray-500 font-mono text-sm">
+              // Built with React, TypeScript & Backend Focus
             </p>
             
           </motion.div>

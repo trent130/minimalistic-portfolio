@@ -126,12 +126,43 @@ export default function Contact() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">
-            Get in Touch
+          <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white font-mono">
+            <span className="text-green-500">&gt;</span> contact --init
           </h2>
           <p className="text-gray-600 dark:text-gray-300">
-            Have a question or want to work together? I'd love to hear from you!
+            Ready to discuss backend architecture or collaborate on a project? Let's connect!
           </p>
+        </motion.div>
+
+        {/* Terminal-style contact info */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="bg-gray-900 dark:bg-gray-800 rounded-lg p-6 mb-8 font-mono text-sm border border-gray-700"
+        >
+          <div className="flex items-center gap-2 mb-4">
+            <div className="flex gap-1">
+              <div className="w-3 h-3 rounded-full bg-red-500"></div>
+              <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+              <div className="w-3 h-3 rounded-full bg-green-500"></div>
+            </div>
+            <span className="text-gray-400">~/contact</span>
+          </div>
+          <div className="space-y-2">
+            <div className="text-green-400">
+              <span className="text-blue-400">$</span> echo $AVAILABILITY
+            </div>
+            <div className="text-white ml-4">
+              Open for backend development opportunities
+            </div>
+            <div className="text-green-400 mt-2">
+              <span className="text-blue-400">$</span> cat interests.txt
+            </div>
+            <div className="text-gray-300 ml-4">
+              API Development | System Architecture | Database Design | Performance Optimization
+            </div>
+          </div>
         </motion.div>
 
         <motion.form 
@@ -140,16 +171,16 @@ export default function Contact() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="space-y-6 bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg"
+          className="space-y-6 bg-gray-900 dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-700"
         >
           {/* Name Input */}
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1 font-mono">
               Name
             </label>
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <FiUser className="h-5 w-5 text-gray-400" />
+                <FiUser className="h-5 w-5 text-green-400" />
               </div>
               <input
                 type="text"
@@ -160,9 +191,9 @@ export default function Contact() {
                 onBlur={handleBlur}
                 className={`block w-full pl-10 pr-3 py-2 rounded-lg border ${
                   errors.name 
-                    ? 'border-red-500 dark:border-red-400' 
-                    : 'border-gray-300 dark:border-gray-600'
-                } bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500`}
+                    ? 'border-red-500' 
+                    : 'border-gray-600'
+                } bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-green-500 font-mono`}
                 aria-invalid={!!errors.name}
                 aria-describedby={errors.name ? 'name-error' : undefined}
               />
@@ -176,12 +207,12 @@ export default function Contact() {
 
           {/* Email Input */}
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1 font-mono">
               Email
             </label>
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <FiMail className="h-5 w-5 text-gray-400" />
+                <FiMail className="h-5 w-5 text-blue-400" />
               </div>
               <input
                 type="email"
@@ -192,9 +223,9 @@ export default function Contact() {
                 onBlur={handleBlur}
                 className={`block w-full pl-10 pr-3 py-2 rounded-lg border ${
                   errors.email 
-                    ? 'border-red-500 dark:border-red-400' 
-                    : 'border-gray-300 dark:border-gray-600'
-                } bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500`}
+                    ? 'border-red-500' 
+                    : 'border-gray-600'
+                } bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 font-mono`}
                 aria-invalid={!!errors.email}
                 aria-describedby={errors.email ? 'email-error' : undefined}
               />
@@ -208,12 +239,12 @@ export default function Contact() {
 
           {/* Message Input */}
           <div>
-            <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-1 font-mono">
               Message
             </label>
             <div className="relative">
               <div className="absolute top-3 left-3 pointer-events-none">
-                <FiMessageSquare className="h-5 w-5 text-gray-400" />
+                <FiMessageSquare className="h-5 w-5 text-yellow-400" />
               </div>
               <textarea
                 id="message"
@@ -224,9 +255,9 @@ export default function Contact() {
                 rows={4}
                 className={`block w-full pl-10 pr-3 py-2 rounded-lg border ${
                   errors.message 
-                    ? 'border-red-500 dark:border-red-400' 
-                    : 'border-gray-300 dark:border-gray-600'
-                } bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500`}
+                    ? 'border-red-500' 
+                    : 'border-gray-600'
+                } bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 font-mono`}
                 aria-invalid={!!errors.message}
                 aria-describedby={errors.message ? 'message-error' : undefined}
               />
@@ -244,10 +275,10 @@ export default function Contact() {
             disabled={status === 'loading'}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className={`w-full py-3 px-4 rounded-lg text-white font-medium transition-colors
+            className={`w-full py-3 px-4 rounded-lg font-medium transition-colors font-mono
               ${status === 'loading' 
-                ? 'bg-blue-400 cursor-not-allowed' 
-                : 'bg-blue-600 hover:bg-blue-700'}`}
+                ? 'bg-gray-600 text-gray-400 cursor-not-allowed' 
+                : 'bg-green-600 text-white hover:bg-green-700 border border-green-500'}`}
           >
             <span className="flex items-center justify-center">
               {status === 'loading' ? (
@@ -256,9 +287,14 @@ export default function Contact() {
                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                     <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                   </svg>
-                  Sending...
+                  sending --message...
                 </>
               ) : 'Send Message'}
+              ) : (
+                <>
+                  <span className="text-blue-400">$</span>&nbsp;send --message
+                </>
+              )}
             </span>
           </motion.button>
 
@@ -269,10 +305,10 @@ export default function Contact() {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0 }}
-                className="flex items-center justify-center text-green-500 dark:text-green-400"
+                className="flex items-center justify-center text-green-400 font-mono"
               >
                 <FiCheck className="mr-2" />
-                Message sent successfully!
+                // Message sent successfully!
               </motion.div>
             )}
             {status === 'error' && (
@@ -280,10 +316,10 @@ export default function Contact() {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0 }}
-                className="flex items-center justify-center text-red-500 dark:text-red-400"
+                className="flex items-center justify-center text-red-400 font-mono"
               >
                 <FiAlertCircle className="mr-2" />
-                Failed to send message. Please try again.
+                // Error: Failed to send message. Please try again.
               </motion.div>
             )}
           </AnimatePresence>
